@@ -54,7 +54,7 @@ pipeline {
         stage('Docker Image Scan') {
             steps {
                 script {
-                    sh "trivy image --format table -o trivy-image-report.html manojkrishnappa/fullstack:${GIT_COMMIT}"
+                    sh "trivy image --format table -o trivy-image-report.html babugudageri/fullstack:${GIT_COMMIT}"
                 }
             }
         }
