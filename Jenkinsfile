@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "manojkrishnappa/fullstack:${GIT_COMMIT}"
-        AWS_REGION = "us-east-1"
+        IMAGE_NAME = "babugudageri/fullstack:${GIT_COMMIT}"
+        AWS_REGION = "ap-south-1"
         CLUSTER_NAME = "microdegree-cluster"
         NAMESPACE = "microdegree"
     }
@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/ManojKRISHNAPPA/complete-cicd-project-microdegree.git'
+                git branch: 'main', url: 'https://github.com/BasavarajGudageri-05/github-practice.git'
             }
         }
 
@@ -72,7 +72,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    sh "docker push manojkrishnappa/fullstack:${GIT_COMMIT}"
+                    sh "docker push babugudageri/fullstack:${GIT_COMMIT}"
                 }
             }
         }
