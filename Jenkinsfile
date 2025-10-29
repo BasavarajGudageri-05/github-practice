@@ -87,7 +87,7 @@ pipeline {
         
         stage('Deploy To Kubernetes') {
             steps {
-                withKubeConfig(caCertificate: '', clusterName: 'microdegree-cluster', contextName: '', credentialsId: 'kube', namespace: 'microdegree', restrictKubeConfigAccess: false, serverUrl: 'https://AB2AD8E7E396070F02E8CEC4D6A0D7E9.gr7.us-east-1.eks.amazonaws.com') {
+                withKubeConfig(caCertificate: '', clusterName: 'microdegree-cluster', contextName: '', credentialsId: 'kube', namespace: 'microdegree', restrictKubeConfigAccess: false, serverUrl: 'https://E216B40D5F70C764410B5F34B418606B.sk1.ap-south-1.eks.amazonaws.com') {
                     sh "sed -i 's|replace|${IMAGE_NAME}|g' deployment.yml"
                     sh "kubectl apply -f deployment.yml -n ${NAMESPACE}"
                 }
