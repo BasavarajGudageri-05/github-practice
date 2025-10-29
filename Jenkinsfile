@@ -37,8 +37,8 @@ pipeline {
                 sh"""
                 mvn sonar:sonar \
                 -Dsonar.projectKey=devops \
-                -Dsonar.host.url=http://3.90.207.159:9000 \
-                -Dsonar.login=3bc7e2fd3433144539118dc582575ad22bcd2d0d
+                -Dsonar.host.url=http://13.200.198.17:9000 \
+                -Dsonar.login=c16b707061eefedadeafa5f703be5d7d02251ae8
                 """
             }
         }
