@@ -46,7 +46,7 @@ pipeline {
             steps {
                 script {
                     sh 'printenv'
-                    sh "docker build -t manojkrishnappa/fullstack:${GIT_COMMIT} ."
+                    sh "docker build -t babugudageri/fullstack:${GIT_COMMIT} ."
                 }
             }
         }
